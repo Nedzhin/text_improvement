@@ -31,8 +31,8 @@ Install the required Python libraries using pip:
 
 Run the following Python script to download the NLTK data:
 
-`import nltk
-nltk.download('stopwords')
+`import nltk \n
+nltk.download('stopwords') \n
 nltk.download('punkt')`
 
 Standard Phrases:
