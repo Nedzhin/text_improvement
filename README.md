@@ -9,17 +9,18 @@ The Text Improvement Engine is a tool designed to analyze a given text and sugge
 - Provides similarity scores to gauge the relevance of suggestions.
 
 ## Technologies Used
-Python 3.7+
-NLTK (Natural Language Toolkit)
-scikit-learn
-pandas
-CSV file for standard phrases storage
-Setup
-Python Environment:
+- Python 3.7+
+- NLTK (Natural Language Toolkit)
+- scikit-learn
+- pandas
+- CSV file for standard phrases storage
+
+## Setup
+1. Python Environment:
 
 Make sure you have Python 3.7 or a later version installed on your system.
 
-Dependencies:
+1. Dependencies:
 
 Install the required Python libraries using pip:
 
