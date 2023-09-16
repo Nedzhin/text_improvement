@@ -27,53 +27,28 @@ Install the required Python libraries using pip:
 
 `pip install nltk scikit-learn pandas`
 
-3. **Download NLTK Data:**
-
-Run the following Python script to download the NLTK data:
-
-`import nltk \n
-nltk.download('stopwords') \n
-nltk.download('punkt')`
-
-Standard Phrases:
+3. **Standard Phrases:**
 
 Create a CSV file named Standardised terms.csv that contains the standardized phrases you want to use. Each phrase should be in a separate row in the first column.
 
-Example CSV format:
-
-python
-Copy code
-Standardized Phrase
-Optimal performance
-Utilize resources
-Enhance productivity
-...
-Input Text:
+4. **Input Text:**
 
 Prepare the text you want to analyze and save it in a file named sample_text.txt.
 
-Usage
+## Usage
 Run the provided Python script (text_improvement.py) to analyze the input text and receive improvement suggestions based on the standardized phrases. Make sure to adjust the similarity threshold as needed.
 
-bash
-Copy code
-python text_improvement.py
-Design Decisions
-Text Preprocessing: The input text is preprocessed by tokenizing it into sentences and words, converting to lowercase, and removing stopwords, punctuation, and special characters. This helps improve the accuracy of similarity calculations.
 
-Cosine Similarity: Cosine similarity with TF-IDF vectors is used to measure the similarity between input sentences and standardized phrases. It provides a numeric score for similarity.
+`python text_improvement.py 'your input sentence'`
 
-Threshold: A similarity threshold of 0.4 is set to control the suggestions' relevance. You can adjust this threshold based on your specific needs.
+## Design Decisions
+**Text Preprocessing:** The input text is preprocessed by tokenizing it into sentences and words, converting to lowercase, and removing stopwords, punctuation, and special characters. This helps improve the accuracy of similarity calculations.
 
-Custom Standard Phrases: The tool allows you to define custom lists of standardized phrases by modifying the Standardised terms.csv file.
+**Cosine Similarity:** Cosine similarity with TF-IDF vectors is used to measure the similarity between input sentences and standardized phrases. It provides a numeric score for similarity.
 
-Example Output
+**Threshold:** A similarity threshold of 0.4 is set to control the suggestions' relevance. You can adjust this threshold based on your specific needs.
+
+**Custom Standard Phrases:** The tool allows you to define custom lists of standardized phrases by modifying the Standardised terms.csv file.
+
+## Example Output
 The tool will provide suggestions for improving the input text by replacing phrases with their more "standard" versions, along with similarity scores.
-
-Feedback
-We welcome feedback and contributions to enhance this Text Improvement Engine. Please feel free to open issues or create pull requests in the repository.
-
-License
-This project is licensed under the MIT License.
-
-This README provides an overview of the Text Improvement Engine, its setup instructions, and design decisions. You can customize it further based on your specific project details and requirements.
