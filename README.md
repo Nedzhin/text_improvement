@@ -1,4 +1,4 @@
-# Text Improvement Engine README
+# Text Improvement Engine
 ## Overview
 The Text Improvement Engine is a tool designed to analyze a given text and suggest improvements based on the similarity to a list of standardized phrases. The goal of this project is to help users enhance the quality and consistency of their written content by aligning it with predefined standard phrases.
 
