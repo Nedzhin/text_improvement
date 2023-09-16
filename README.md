@@ -15,6 +15,11 @@ The Text Improvement Engine is a tool designed to analyze a given text and sugge
 - pandas
 - CSV file for standard phrases storage
 
+## Ways to run
+There you can the code in two ways:
+- by the command line which i provide
+- in the jupyter notebook or in colab. I have provided the notebook
+
 ## Setup
 1. **Python Environment:** 
 
@@ -39,7 +44,7 @@ Prepare the text you want to analyze and save it in a file named sample_text.txt
 Run the provided Python script (text_improvement.py) to analyze the input text and receive improvement suggestions based on the standardized phrases. Make sure to adjust the similarity threshold as needed.
 
 
-`python text_improvement.py 'your input sentence'`
+`python text_improve.py 'your input sentence'`
 
 ## Design Decisions
 **Text Preprocessing:** The input text is preprocessed by tokenizing it into sentences and words, converting to lowercase, and removing stopwords, punctuation, and special characters. This helps improve the accuracy of similarity calculations.
