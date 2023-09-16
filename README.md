@@ -16,25 +16,25 @@ The Text Improvement Engine is a tool designed to analyze a given text and sugge
 - CSV file for standard phrases storage
 
 ## Setup
-1. Python Environment:
+1. **Python Environment:** 
 
 Make sure you have Python 3.7 or a later version installed on your system.
 
-1. Dependencies:
+2. **Dependencies:**
 
 Install the required Python libraries using pip:
 
-Copy code
-pip install nltk scikit-learn pandas
-Download NLTK Data:
+
+`pip install nltk scikit-learn pandas`
+
+3. **Download NLTK Data:**
 
 Run the following Python script to download the NLTK data:
 
-python
-Copy code
-import nltk
+`import nltk
 nltk.download('stopwords')
-nltk.download('punkt')
+nltk.download('punkt')`
+
 Standard Phrases:
 
 Create a CSV file named Standardised terms.csv that contains the standardized phrases you want to use. Each phrase should be in a separate row in the first column.
