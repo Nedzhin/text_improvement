@@ -5,22 +5,25 @@ from sklearn.metrics.pairwise import cosine_similarity
 import csv
 import argparse
 
+# Reading the input text from the command line
 parser = argparse.ArgumentParser(description='Text Improvement Engine')
 parser.add_argument('input_text', type=str, help='Input text to analyze and improve')
 args = parser.parse_args()
 
+# dowloading the tools for text analyzing
 nltk.download('stopwords')
 nltk.download('punkt')
 from nltk.corpus import stopwords
 stop_words = set(stopwords.words('english'))
 
 
-
+# reading our given standard phrases
 standard_phrases = []
 with open('Standardised terms.csv', mode='r') as file:
     csv_reader = csv.reader(file)
     for row in csv_reader:
         standard_phrases.append(row[0])
+
 
 # When we will read from the file we can use this function
 
@@ -28,7 +31,8 @@ with open('Standardised terms.csv', mode='r') as file:
 # with open('sample_text.txt', 'r') as file:
 #     input_text = file.read()
     
-    
+
+# processing function of the text
 def preprocess_text(text):
     sentences = sent_tokenize(text)
     word_tokens = [word_tokenize(sentence) for sentence in sentences]
@@ -39,17 +43,19 @@ def preprocess_text(text):
 input_sentences = preprocess_text(args.input_text)
 
 
+# initialize model for vectorizing the text and trainin it our given standard phrases
 tfidf_vectorizer = TfidfVectorizer()
 tfidf_matrix_standard = tfidf_vectorizer.fit_transform(standard_phrases)
 tfidf_matrix_input = tfidf_vectorizer.transform(input_sentences)
 
-
+# with cosine similarity we will find the most similars
 similarities = cosine_similarity(tfidf_matrix_input, tfidf_matrix_standard)
 
-
+# gice the threshold to decide can we replace the original phrase
 threshold = 0.4  
 
 
+# printing the original phrases and their better standard versions with score of similarity
 for i, sentence in enumerate(input_sentences):
     similar_indices = [idx for idx, score in enumerate(similarities[i]) if score > threshold]
     
