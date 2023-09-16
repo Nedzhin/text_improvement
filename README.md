@@ -1,16 +1,14 @@
-# text_improvement
-This algorithms looks for the text and given standardized words and gives the suggestion to replace with the more appropriate word.
-
 # Text Improvement Engine README
 ## Overview
 The Text Improvement Engine is a tool designed to analyze a given text and suggest improvements based on the similarity to a list of standardized phrases. The goal of this project is to help users enhance the quality and consistency of their written content by aligning it with predefined standard phrases.
 
 ## Features
-User-friendly text analysis and improvement suggestions.
-Utilizes NLTK and scikit-learn for natural language processing and similarity scoring.
-Supports custom lists of standardized phrases.
-Provides similarity scores to gauge the relevance of suggestions.
-Technologies Used
+- User-friendly text analysis and improvement suggestions.
+- Utilizes NLTK and scikit-learn for natural language processing and similarity scoring.
+- Supports custom lists of standardized phrases.
+- Provides similarity scores to gauge the relevance of suggestions.
+
+## Technologies Used
 Python 3.7+
 NLTK (Natural Language Toolkit)
 scikit-learn
